@@ -126,3 +126,8 @@ mysql_replication_role: ''
 mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
+
+# Set to true to skip the tasks contained in secure-installation
+# If you do choose to skip these steps, it is STRONGLY recommended
+# that you run mysql_secure_installation after install.
+mysql_skip_secure_installation: false

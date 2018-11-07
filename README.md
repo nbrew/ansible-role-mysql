@@ -122,6 +122,10 @@ The rest of the settings in `defaults/main.yml` control MySQL's memory usage and
 
 Replication settings. Set `mysql_server_id` and `mysql_replication_role` by server (e.g. the master would be ID `1`, with the `mysql_replication_role` of `master`, and the slave would be ID `2`, with the `mysql_replication_role` of `slave`). The `mysql_replication_user` uses the same keys as `mysql_users`, and is created on master servers, and used to replicate on all the slaves.
 
+    mysql_skip_secure_installation: false
+
+Should we skip the steps to secure this installation of mysql? Set `mysql_skip_secure_installation` to `true` to skip the tasks equivalent to running `mysql_secure_installation` on your host.
+
 ### Later versions of MySQL on CentOS 7
 
 If you want to install MySQL from the official repository instead of installing the system default MariaDB equivalents, you can add the following `pre_tasks` task in your playbook:
